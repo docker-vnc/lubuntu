@@ -6,7 +6,7 @@ container:
 docker_builder:
   env:
     DOCKER_USERNAME: tigefa
-    DOCKER_PASSWORD: ENCRYPTED[f5837087e13403c1483dbeeb520330ccbf20981b99c7f58b409a7adb1f4c16df8ab8aabdb5bf269e639e1759377231e3]
+    DOCKER_PASSWORD: ENCRYPTED[bcbcb349d0214d9a223b3fa7f5449f9db82cfb1c619e34279a8125cdbeb8004b2c8c3b326d1730fae8738d7314da7b26]
   build_script: docker build --tag vncserver/lubuntu .
   login_script: docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
   push_script: docker push vncserver/lubuntu
