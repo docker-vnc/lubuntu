@@ -1,0 +1,12 @@
+container:
+  image: tigefa/bionic
+  cpu: 8
+  memory: 21
+
+docker_builder:
+  env:
+    DOCKER_USERNAME: tigefa
+    DOCKER_PASSWORD: ENCRYPTED[f5837087e13403c1483dbeeb520330ccbf20981b99c7f58b409a7adb1f4c16df8ab8aabdb5bf269e639e1759377231e3]
+  build_script: docker build --tag vncserver/lubuntu .
+  login_script: docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+  push_script: docker push vncserver/lubuntu
