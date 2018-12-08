@@ -1,5 +1,6 @@
 xhost + &
-xterm -geometry 80x24+0+0i &
+#xterm -geometry 80x24+0+0i &
+x-terminal-emulator -geometry 80x24+0+0i &
 startlxde
 vncserver -kill :1
 pkill tail
