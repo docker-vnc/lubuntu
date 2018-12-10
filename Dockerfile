@@ -10,7 +10,8 @@ RUN chmod +x /etc/my_init.d/vncserver.sh
 
 # Install lubuntu-desktop
 COPY sources.list /etc/apt/sources.list
-RUN apt-get update && \
+RUN dpkg --remove-architecture i386 && \
+    apt-get update && \
     apt-get install -yqq sudo wget curl netcat aria2 nano whois figlet p7zip p7zip-full zip unzip rar unrar && \
     add-apt-repository ppa:webupd8team/terminix -y && \
     add-apt-repository ppa:clipgrab-team/ppa -y && \
