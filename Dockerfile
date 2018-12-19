@@ -7,6 +7,12 @@ CMD ["/sbin/my_init"]
 RUN mkdir -p /etc/my_init.d
 COPY vncserver.sh /etc/my_init.d/vncserver.sh
 RUN chmod +x /etc/my_init.d/vncserver.sh
+RUN chmod 755 /etc/container_environment
+RUN chmod 644 /etc/container_environment.sh /etc/container_environment.json
+# Give children processes 5 minutes to timeout
+ENV KILL_PROCESS_TIMEOUT=300
+# Give all other processes (such as those which have been forked) 5 minutes to timeout
+ENV KILL_ALL_PROCESSES_TIMEOUT=300
 
 # Install lubuntu-desktop
 COPY sources.list /etc/apt/sources.list
