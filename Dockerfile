@@ -36,7 +36,7 @@ RUN dpkg --remove-architecture i386 && \
     echo "deb [trusted=yes] https://deb.torproject.org/torproject.org bionic main" | tee /etc/apt/sources.list.d/tor.list && \
     echo "deb-src [trusted=yes] https://deb.torproject.org/torproject.org bionic main" | tee -a /etc/apt/sources.list.d/tor.list && \
     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+    echo "deb [trusted=yes] https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash && \
     apt-get update -yqq && apt-get dist-upgrade -yqq && \
