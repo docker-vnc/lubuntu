@@ -1,1 +1,5 @@
+title: Docker VNC Lubuntu
+description: Docker images with VNC on Lubuntu.
+show_downloads: true
+google_analytics: UA-44336640-7
 theme: jekyll-theme-slate
