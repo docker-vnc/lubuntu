@@ -34,10 +34,10 @@ RUN dpkg --remove-architecture i386 && \
     apt-get update -yqq && apt-get dist-upgrade -yqq && \
     apt-get install -yqq lubuntu-desktop && \
     apt-get install -yqq tightvncserver && \
-    apt-get install -yqq git git-lfs bzr mercurial subversion command-not-found command-not-found-data gnupg gnupg2 tzdata gvfs-bin && \
+    apt-get install -yqq git git-lfs bzr mercurial subversion gnupg gnupg2 && \
     apt-get install -yqq gnome-system-monitor tilix && \
-    apt-get install -yqq python-apt python-xlib net-tools telnet bash bash-completion lsb-base lsb-release lshw && \
-    apt-get install -yqq dconf-cli dconf-editor clipit xclip caffeine python3-xlib breeze-cursor-theme htop xterm && \
+    apt-get install -yqq net-tools telnet bash bash-completion lshw && \
+    apt-get install -yqq dconf-cli dconf-editor clipit xclip caffeine breeze-cursor-theme htop xterm && \
     apt-get install -yqq numix-gtk-theme numix-icon-theme-circle && \
     apt-get autoremove -y && \
     update-alternatives --set x-terminal-emulator $(which tilix)
