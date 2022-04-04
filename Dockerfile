@@ -38,9 +38,7 @@ RUN dpkg --remove-architecture i386 && \
     apt-get install -yqq gnome-system-monitor tilix && \
     apt-get install -yqq net-tools telnet bash bash-completion lshw && \
     apt-get install -yqq dconf-cli dconf-editor clipit xclip caffeine breeze-cursor-theme htop xterm && \
-    apt-get install -yqq numix-gtk-theme numix-icon-theme-circle && \
-    apt-get autoremove -y && \
-    update-alternatives --set x-terminal-emulator $(which tilix)
+    apt-get install -yqq numix-gtk-theme numix-icon-theme-circle
 
 RUN ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata
