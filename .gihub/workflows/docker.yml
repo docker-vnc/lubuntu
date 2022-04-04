@@ -4,9 +4,7 @@ on:
   schedule:
     - cron: '24 0 * * *'
   push:
-    branches: [ focal ]
-  pull_request:
-    branches: [ focal ]
+
 
 env:
   # Use docker.io for Docker Hub if empty
