@@ -22,11 +22,11 @@ RUN dpkg --remove-architecture i386 && \
     add-apt-repository ppa:transmissionbt/ppa -y && \
     add-apt-repository ppa:numix/ppa -y && \
     add-apt-repository ppa:snwh/ppa -y && \
-    add-apt-repository ppa:qbittorrent-team/qbittorrent-unstable -y && \
+    add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y && \
     add-apt-repository ppa:neovim-ppa/stable -y && \
-    add-apt-repository ppa:webupd8team/java -y && \
-    add-apt-repository ppa:chris-lea/redis-server -y && \
+    add-apt-repository ppa:redislabs/redis -y && \
     add-apt-repository ppa:brightbox/ruby-ng -y && \
+    add-apt-repository ppa:git-core/ppa -y && \
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash && \
     apt-get update -yqq && apt-get dist-upgrade -yqq && \
