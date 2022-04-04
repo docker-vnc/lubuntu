@@ -15,7 +15,7 @@ ENV KILL_PROCESS_TIMEOUT=300
 ENV KILL_ALL_PROCESSES_TIMEOUT=300
 
 # Install lubuntu-desktop
-COPY sources.list /etc/apt/sources.list
+#COPY sources.list /etc/apt/sources.list
 RUN dpkg --remove-architecture i386 && \
     apt-get update && \
     apt-get install -yqq sudo wget curl netcat aria2 nano whois figlet p7zip p7zip-full zip unzip rar unrar && \
