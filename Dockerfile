@@ -38,7 +38,7 @@ RUN dpkg --remove-architecture i386 && \
     apt-get install -yqq git git-lfs bzr mercurial subversion command-not-found command-not-found-data gnupg gnupg2 tzdata gvfs-bin && \
     apt-get install -yqq gnome-system-monitor tilix && \
     apt-get install -yqq python-apt python-xlib net-tools telnet bash bash-completion lsb-base lsb-release lshw && \
-    apt-get install -yqq dconf-cli dconf-editor clipit xclip flashplugin-installer caffeine python3-xlib breeze-cursor-theme htop xterm && \
+    apt-get install -yqq dconf-cli dconf-editor clipit xclip caffeine python3-xlib breeze-cursor-theme htop xterm && \
     apt-get install -yqq numix-gtk-theme numix-icon-theme-circle && \
     apt-get autoremove -y && \
     update-alternatives --set x-terminal-emulator $(which tilix)
