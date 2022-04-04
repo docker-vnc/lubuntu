@@ -13,6 +13,8 @@ RUN chmod 644 /etc/container_environment.sh /etc/container_environment.json
 ENV KILL_PROCESS_TIMEOUT=300
 # Give all other processes (such as those which have been forked) 5 minutes to timeout
 ENV KILL_ALL_PROCESSES_TIMEOUT=300
+ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBCONF_NONINTERACTIVE_SEEN=true
 
 # Install lubuntu-desktop
 #COPY sources.list /etc/apt/sources.list
