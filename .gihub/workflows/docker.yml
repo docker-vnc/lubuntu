@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '24 0 * * *'
   push:
+    branches: [ focal ]
+    # Publish semver tags as releases.
+    tags: [ 'v*.*.*' ]
+  pull_request:
+    branches: [ focal ]
 
 
 env:
