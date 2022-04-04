@@ -21,7 +21,6 @@ RUN dpkg --remove-architecture i386 && \
     apt-get install -yqq sudo wget curl netcat aria2 nano whois figlet p7zip p7zip-full zip unzip rar unrar && \
     add-apt-repository ppa:transmissionbt/ppa -y && \
     add-apt-repository ppa:numix/ppa -y && \
-    add-apt-repository ppa:numix/numix-daily -y && \
     add-apt-repository ppa:snwh/ppa -y && \
     add-apt-repository ppa:qbittorrent-team/qbittorrent-unstable -y && \
     add-apt-repository ppa:neovim-ppa/stable -y && \
