@@ -19,7 +19,6 @@ COPY sources.list /etc/apt/sources.list
 RUN dpkg --remove-architecture i386 && \
     apt-get update && \
     apt-get install -yqq sudo wget curl netcat aria2 nano whois figlet p7zip p7zip-full zip unzip rar unrar && \
-    add-apt-repository ppa:uget-team/ppa -y && \
     add-apt-repository ppa:transmissionbt/ppa -y && \
     add-apt-repository ppa:numix/ppa -y && \
     add-apt-repository ppa:numix/numix-daily -y && \
