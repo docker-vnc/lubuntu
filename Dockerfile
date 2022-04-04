@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.11
+FROM phusion/baseimage:master
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
@@ -19,26 +19,19 @@ COPY sources.list /etc/apt/sources.list
 RUN dpkg --remove-architecture i386 && \
     apt-get update && \
     apt-get install -yqq sudo wget curl netcat aria2 nano whois figlet p7zip p7zip-full zip unzip rar unrar && \
-    add-apt-repository ppa:webupd8team/terminix -y && \
     add-apt-repository ppa:clipgrab-team/ppa -y && \
     add-apt-repository ppa:uget-team/ppa -y && \
     add-apt-repository ppa:transmissionbt/ppa -y && \
     add-apt-repository ppa:numix/ppa -y && \
     add-apt-repository ppa:numix/numix-daily -y && \
     add-apt-repository ppa:snwh/ppa -y && \
-    add-apt-repository ppa:mc3man/mpv-tests -y && \
     add-apt-repository ppa:qbittorrent-team/qbittorrent-unstable -y && \
     add-apt-repository ppa:neovim-ppa/stable -y && \
     add-apt-repository ppa:webupd8team/java -y && \
-    add-apt-repository ppa:certbot/certbot -y && \
     add-apt-repository ppa:chris-lea/redis-server -y && \
     add-apt-repository ppa:brightbox/ruby-ng -y && \
-    echo "deb [trusted=yes] https://deb.torproject.org/torproject.org bionic main" | tee /etc/apt/sources.list.d/tor.list && \
-    echo "deb-src [trusted=yes] https://deb.torproject.org/torproject.org bionic main" | tee -a /etc/apt/sources.list.d/tor.list && \
-    curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-    echo "deb [trusted=yes] https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
-    curl -sL https://deb.nodesource.com/setup_8.x | bash && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash && \
     apt-get update -yqq && apt-get dist-upgrade -yqq && \
     apt-get install -yqq lubuntu-desktop && \
     apt-get install -yqq tightvncserver && \
@@ -47,9 +40,7 @@ RUN dpkg --remove-architecture i386 && \
     apt-get install -yqq python-apt python-xlib net-tools telnet bash bash-completion lsb-base lsb-release lshw && \
     apt-get install -yqq dconf-cli dconf-editor clipit xclip flashplugin-installer caffeine python3-xlib breeze-cursor-theme htop xterm && \
     apt-get install -yqq numix-gtk-theme numix-icon-theme-circle && \
-    apt-get install -yqq tor deb.torproject.org-keyring polipo && \
     apt-get autoremove -y && \
-    ln -fs /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh && \
     update-alternatives --set x-terminal-emulator $(which tilix)
 
 RUN ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && \
